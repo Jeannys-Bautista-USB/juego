@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 620" role="img" aria-labelledby="tituloGrimorio">
+  <title id="tituloGrimorio">Ilustración de la página del grimorio con la fórmula de Newton-Raphson</title>
+  <defs>
+    <radialGradient id="halo" cx="50%" cy="46%" r="55%">
+      <stop offset="0" stop-color="#e879f9" stop-opacity=".38"/>
+      <stop offset=".55" stop-color="#8b5cf6" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#08040f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="tapa" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4c1d95"/>
+      <stop offset=".5" stop-color="#2e1065"/>
+      <stop offset="1" stop-color="#190a35"/>
+    </linearGradient>
+    <linearGradient id="paginaIzq" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f5ead7"/>
+      <stop offset=".7" stop-color="#e6d4b8"/>
+      <stop offset="1" stop-color="#cdb591"/>
+    </linearGradient>
+    <linearGradient id="paginaDer" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f8efdf"/>
+      <stop offset=".7" stop-color="#e9d8bd"/>
+      <stop offset="1" stop-color="#d2bb98"/>
+    </linearGradient>
+    <linearGradient id="lomo" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1b0b33"/>
+      <stop offset=".5" stop-color="#5b21b6"/>
+      <stop offset="1" stop-color="#1b0b33"/>
+    </linearGradient>
+    <linearGradient id="brillo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fcd34d"/>
+      <stop offset="1" stop-color="#e879f9"/>
+    </linearGradient>
+    <filter id="sombra" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="26" stdDeviation="26" flood-color="#000" flood-opacity=".65"/>
+    </filter>
+    <filter id="luz" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="9" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <ellipse cx="400" cy="300" rx="360" ry="280" fill="url(#halo)"/>
+
+  <g filter="url(#sombra)">
+    <path d="M120 176 Q126 138 168 132 L382 154 L382 512 L168 534 Q126 528 120 490 Z" fill="url(#tapa)" stroke="#7c3aed" stroke-opacity=".55" stroke-width="2"/>
+    <path d="M680 176 Q674 138 632 132 L418 154 L418 512 L632 534 Q674 528 680 490 Z" fill="url(#tapa)" stroke="#7c3aed" stroke-opacity=".55" stroke-width="2"/>
+
+    <path d="M150 168 Q156 146 186 142 L386 162 L386 500 L186 520 Q156 516 150 494 Z" fill="url(#paginaIzq)"/>
+    <path d="M650 168 Q644 146 614 142 L414 162 L414 500 L614 520 Q644 516 650 494 Z" fill="url(#paginaDer)"/>
+    <path d="M386 162 Q400 174 414 162 L414 500 Q400 512 386 500 Z" fill="url(#lomo)"/>
+    <path d="M386 162 Q400 174 414 162" fill="none" stroke="#a78bfa" stroke-opacity=".55" stroke-width="2"/>
+
+    <!-- Texto de la página izquierda -->
+    <g fill="#5b4636" font-family="Georgia, 'Times New Roman', serif">
+      <text x="196" y="214" font-size="19" letter-spacing="4" font-weight="bold">LA RUTA</text>
+      <text x="196" y="238" font-size="12" letter-spacing="2" opacity=".7">CAPÍTULO VII · LA PARCA</text>
+      <path d="M196 254 H356" stroke="#a98c63" stroke-width="1.5" opacity=".65"/>
+      <text x="196" y="286" font-size="14">Cuando el error crece,</text>
+      <text x="196" y="309" font-size="14">la sombra se acerca.</text>
+      <text x="196" y="332" font-size="14">Corrige el paso y</text>
+      <text x="196" y="355" font-size="14">la puerta aparecerá.</text>
+      <text x="196" y="398" font-size="14" font-style="italic" opacity=".78">— grimorio de la bruja</text>
+    </g>
+
+    <!-- Diagrama de convergencia en la página izquierda -->
+    <g transform="translate(196 424)">
+      <path d="M0 62 H168" stroke="#8d7354" stroke-width="1.4"/>
+      <path d="M0 62 V0" stroke="#8d7354" stroke-width="1.4"/>
+      <path d="M8 56 C36 54 52 42 72 26 S108 4 156 2" fill="none" stroke="#7c3aed" stroke-width="2.4"/>
+      <g fill="#b45309">
+        <circle cx="30" cy="51" r="4"/>
+        <circle cx="84" cy="18" r="4"/>
+        <circle cx="132" cy="5" r="4"/>
+      </g>
+      <path d="M30 51 L64 0" stroke="#d97706" stroke-width="1.2" stroke-dasharray="4 4"/>
+      <path d="M84 18 L104 0" stroke="#d97706" stroke-width="1.2" stroke-dasharray="4 4"/>
+      <text x="2" y="78" font-size="11" fill="#8d7354" font-family="monospace">x0</text>
+      <text x="78" y="78" font-size="11" fill="#8d7354" font-family="monospace">x1</text>
+      <text x="126" y="78" font-size="11" fill="#8d7354" font-family="monospace">x2</text>
+    </g>
+
+    <!-- Fórmula en la página derecha -->
+    <g font-family="'Cascadia Code', Consolas, monospace">
+      <text x="446" y="218" fill="#7c2d12" font-size="13" letter-spacing="2" opacity=".75">NEWTON · RAPHSON</text>
+      <text x="446" y="286" fill="#3b1f5c" font-size="30" font-weight="bold">x</text>
+      <text x="466" y="298" fill="#3b1f5c" font-size="18">n+1</text>
+      <text x="508" y="286" fill="#7c2d12" font-size="30">=</text>
+      <text x="540" y="286" fill="#3b1f5c" font-size="30" font-weight="bold">x</text>
+      <text x="560" y="298" fill="#3b1f5c" font-size="18">n</text>
+      <text x="592" y="286" fill="#7c2d12" font-size="30">−</text>
+      <g transform="translate(620 232)">
+        <text x="0" y="24" fill="#6d28d9" font-size="22">f(x</text>
+        <text x="44" y="34" fill="#6d28d9" font-size="14">n</text>
+        <text x="54" y="24" fill="#6d28d9" font-size="22">)</text>
+        <path d="M0 36 H64" stroke="#6d28d9" stroke-width="2"/>
+        <text x="0" y="62" fill="#9d174d" font-size="22">f′(x</text>
+        <text x="52" y="72" fill="#9d174d" font-size="14">n</text>
+        <text x="62" y="62" fill="#9d174d" font-size="22">)</text>
+      </g>
+    </g>
+
+    <g fill="#5b4636" font-family="Georgia, 'Times New Roman', serif">
+      <text x="446" y="372" font-size="14">La tangente señala el camino;</text>
+      <text x="446" y="395" font-size="14">cada iteración acorta la distancia.</text>
+      <path d="M446 416 H624" stroke="#a98c63" stroke-width="1.5" opacity=".65"/>
+      <text x="446" y="446" font-size="12" letter-spacing="1.5" opacity=".7">REGLA DE LA PARCA · 0,97</text>
+      <text x="446" y="476" font-size="12" letter-spacing="1.5" opacity=".7">LÍMITES · 70 — 400</text>
+    </g>
+
+    <!-- Sello mágico -->
+    <g transform="translate(580 468)" filter="url(#luz)">
+      <circle r="26" fill="none" stroke="url(#brillo)" stroke-width="2"/>
+      <circle r="18" fill="none" stroke="#e879f9" stroke-width="1" stroke-dasharray="3 4"/>
+      <path d="M0 -12 L4 -3 L13 0 L4 3 L0 12 L-4 3 L-13 0 L-4 -3 Z" fill="#fcd34d"/>
+    </g>
+  </g>
+
+  <!-- Chispas -->
+  <g fill="#f0abfc">
+    <circle cx="150" cy="110" r="3" opacity=".9"/>
+    <circle cx="676" cy="96" r="2.4" opacity=".8"/>
+    <circle cx="104" cy="360" r="2" opacity=".7"/>
+    <circle cx="704" cy="330" r="3.2" opacity=".85"/>
+    <circle cx="250" cy="580" r="2.2" opacity=".6"/>
+    <circle cx="610" cy="588" r="2.6" opacity=".7"/>
+  </g>
+  <g fill="#fcd34d" opacity=".9">
+    <path d="M120 60 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3 z"/>
+    <path d="M700 190 l2 6 6 2 -6 2 -2 6 -2 -6 -6 -2 6 -2 z"/>
+  </g>
+</svg>
